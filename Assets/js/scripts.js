@@ -3,16 +3,10 @@ var currentNumber = 0;
 
 function increment(){
     currentNumber = currentNumber + 1;
-    currentNumberWrapper.innerHTML = currentNumber;
-    if(currentNumber >= 0){
-        currentNumberWrapper.style.color = 'black';
-    }
+    currentNumberWrapper.addEventListener(currentNumber, currentNumberWrapper.innerHTML = currentNumber);
 }
 
 function decrement(){
     currentNumber = currentNumber - 1;
-    currentNumberWrapper.innerHTML = currentNumber;
-    if(currentNumber < 0){
-        currentNumberWrapper.style.color = 'red';
-    }
+    currentNumberWrapper.addEventListener(currentNumber, currentNumberWrapper.innerHTML = currentNumber);
 }
